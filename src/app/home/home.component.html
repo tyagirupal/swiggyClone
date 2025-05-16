@@ -1,0 +1,310 @@
+<div class="main">
+    <div class="head">
+        <header>
+            <a href="/">
+                <img src="https://res.cloudinary.com/dutdah0l9/image/upload/v1720058694/Swiggy_logo_bml6he.png" alt="">
+            </a>
+            <div class="head_inside" *ngFor="let data of head_Inside">
+                <a href={{data.link}} target="_blank">{{data.cont}}</a>
+            </div>
+            <div class="sign" (click)="navigateToLogin()">
+                <button  style="border: none; background-color: black; color: white; ">
+                   Sign in
+                </button>
+            </div>
+        </header>
+    </div>
+    <div class="loc_res">
+        <img class="groceries" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png" alt="">
+        <div class="heading_loc_res">
+            <div class="insideHeading">
+                Order food & groceries. Discover best restaurants. Swiggy it!
+            </div>
+        </div>
+        <div class="lrInput">
+            <div class="locationinput">
+                <div class="insideLoc">
+                    <div class="insidelocInput">
+                        <input class="realInput" type="text" name="" id="location" autocomplete="off" placeholder="Enter your delivery location">
+                    </div>
+
+                </div>
+            </div>
+            <div class="restinput">
+                <div class="resInput">
+                    <div class="insideLoc">
+                        <div class="insideResInput" style="padding-left: 16px">
+                            <div class="resSearch">Search for restaurant, item or more</div>
+                            <!-- <input class="realInput" type="text" name="" id="location" autocomplete="off" placeholder="Enter your delivery location"> -->
+
+                        </div>
+                        <div class="ser_Icon">
+                            <mat-icon>search</mat-icon>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img  class="groceriesTwo left" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png" alt="">
+    </div>
+    <div class="swiggyService">
+        <div class="swiggyService_inside">
+            <div class="swiggyService_box" *ngFor="let data of swiggyService_Box">
+                <a href={{data.anchaLink}}>
+                    <img class="swiggyService_box_img" src={{data.img}} alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="food">
+        <div class="dineoutButton">
+            <button class="dineButton" (click)="scrollLeft2()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button class="dineButton" (click)="scrollRight2()">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </div>
+       <div class="Food_food" #foodContainer>
+         <div class="foodRow">
+            <div class="foodRow_Inside" >
+                <div style="display: flex;">
+                    <div class="foodRow_Inside_inside" style="margin-right: 40px;" *ngFor="let data of foodRowImg">
+                        <button (click)="navigateToBiryani()" class="foodRowButton" style="width: 144px;min-width: 144px; height: 180px; min-height: 180px;">
+                            <!-- <ng-image-slider style="width: 100%;height: 100%;" [infinite]="false"  slideImage="1"  [autoSlide]="1" [images]="data.img" alt=""></ng-image-slider> -->
+                            <img style="width: 100%;height: 100%;"   [src]="data.img" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+         <div class="foodRow">
+            <div class="foodRow_Inside" #foodContainerTwo>
+                <div style="display: flex;">
+                    <div class="foodRow_Inside_inside" style="margin-right: 40px;" *ngFor="let data of foodRowImgTwo">
+                        <button class="foodRowButton" style="width: 144px;min-width: 144px; height: 180px; min-height: 180px;">
+                            <img style="width: 100%;height: 100%;"  [src]="data.img" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </div>
+    </div>
+    <div class="food">
+        <div class="dineoutButton">
+            <button class="dineButton" (click)="scrollLeftGro()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button class="dineButton" (click)="scrollRightGro()">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </div>
+        <div class="GrocButton">
+            <h1>Shop groceries on Instamart</h1>
+       </div>
+       <div class="Food_food" #groceries>
+         <div class="foodRow" >
+            <div class="foodRow_Inside" >
+                <div style="display: flex;">
+                    <div class="foodRow_Inside_inside" style="margin-right: 40px;" *ngFor="let data of grocRowImg">
+                        <button class="foodRowButton" style="width: 144px;min-width: 144px; height: 180px; min-height: 180px;">
+                            <!-- <ng-image-slider style="width: 100%;height: 100%;" [infinite]="false"  slideImage="1"  [autoSlide]="1" [images]="data.img" alt=""></ng-image-slider> -->
+                            <img style="width: 100%;height: 100%;"   [src]="data.img" alt="">
+                        </button>
+                        <div class="foodRow_Inside_inside_cont" style="font-family: Gilroy;font-weight: 600;font-size: 20px; line-height: 24px;letter-spacing: -0.5px;color: rgba(2, 6, 12, 0.75);text-align: center;">
+                            <div>{{data.cont}}</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      
+       </div>
+    </div>
+   
+
+
+    <div class="dineout">
+        <div class="dineoutButton">
+            <button class="dineButton" (click)="scrollLeftDine()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button class="dineButton" (click)="scrollRightDine()">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </div>
+        
+        <div class="dineoutHead">
+            <div class="dineoutHeadHead">
+                Discover best restaurants on Dineout
+            </div>
+        </div>
+        <div class="dineout_MainCont" #dineout>
+            <div class="dineout_cont">
+                <div *ngFor="let dine of dineOutData" >
+                    <a href={{dine.link}} target="_blank" class="Anchor">
+                        <div class="anchorImg" >
+                           <div class="anchorImgOne">
+                                <div class="anchorImgData">
+                                   <img style="height: 100%; width: 100%;" [src]="dine.img" alt="">
+                                </div>
+
+                           </div>
+                           <div class="anchorImgTwo">
+                                <div class="anchorImgDataTwo">
+
+                                </div>
+                           </div>
+                           <div class="anchorImgThree">
+                                <div class="anchorImgDataThree">
+                                    {{dine.text}}
+                                </div>
+                           </div>
+                        </div>
+                        <div class="anchorData">
+                            <div class="anchorDataInsideOne">
+                                <div class="anchorDataInsideOneCont" style="color: rgba(2, 6, 12, 0.6);;">
+                                    <p style="font-size: 13px;">Continental • Italian
+                                        ₹1400 for two</p>
+                                    <p style="font-size: 13px;">INS Tower, Bandra East, Mumbai
+                                            2.8 km</p>
+                                    <button class="dineButtonTwo">offer_icon
+                                        Flat 15% off on pre-booking
+                                        + 3 more</button>
+                                    <button class="dineButtonThree">Up to 10% off with bank offers</button>
+                                    <p style="font-size: 13px;color: rgb(81, 52, 182);font-family: Gilroy;">Get extra 10% off using GIRFSPECIALS</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div style="height: 100%; width: 100%; margin: 0 auto ;    margin-top: 80px">
+        <img style="object-fit: contain;height: 100%; border-style: none;width: 100%;" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png" alt="">
+    </div>
+
+    <div class="citiesDil">
+        <h2 class="cityHead">Cities with food delivery</h2>
+        <div class="citiesDilInside" >
+            <a href={{data.link}} class="citiesAnchor" *ngFor="let data of citiesDilDara">
+                <div class="insideCitiesAnchor">
+                    {{data.data}}
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="citiesDil">
+        <h2 class="cityHead">Cities with grocery delivery</h2>
+        <div class="citiesDilInside" >
+            <a href={{data.link}} class="citiesAnchor" *ngFor="let data of citiesDilgro">
+                <div class="insideCitiesAnchor">
+                    {{data.data}}
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="Bottom">
+        <div class="bottomUp" *ngFor="let data of bottomData">
+            <div class="bottomUpDataImg">
+                <div style="margin-bottom: 8px; margin-top: calc(48px)" *ngFor="let data of data.swiggyImg" >
+                    <div style=" width: 160px; height: 48px;">
+                        <img style="width: 100%; height: 100%;" src={{data.img}} alt="">
+                    </div>
+                    <div style="font-family: Gilroy;font-weight: 200;font-size: 16px;line-height: 21px; letter-spacing: -0.4px; color: rgba(2, 6, 12, 0.6);">
+                        {{data.swigyypPara}}
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottomUpData" >
+                <ul style="list-style: none; margin: 0; padding: 0; margin-top: calc(48px)" >
+                    <li  *ngFor="let data of data.company"    >
+                        <div class="bottomDataData"  [ngClass]="{'font-weight-600': data.liData === 'Company'}">
+                            {{data.liData}}
+                        </div>
+                    </li>
+                   
+                </ul>
+                <ul style="list-style: none; margin: 0; padding: 0; margin-top: calc(48px)" >
+                    <li  *ngFor="let data of data.contact"> 
+                        <div  class="bottomDataData" [ngClass]="{'font-weight-600': data.liData === 'Contact us'}">
+                            {{data.liData}}
+                        </div>
+                    </li>
+                </ul>
+                <ul style="list-style: none; margin: 0; padding: 0; margin-top: calc(48px)" >
+                    <li *ngFor="let data of data.available"> 
+                        <div  class="bottomDataData"
+                        [ngClass]="{'font-weight-600': data.liData === 'Available in:'}">
+                            {{data.liData}}
+                        </div>
+                    </li>
+                </ul>
+                <ul style="list-style: none; margin: 0; padding: 0; margin-top: calc(48px)" >
+                    <li   *ngFor="let data of data.life">
+                        <div  class="bottomDataData"
+                        [ngClass]="{'font-weight-600': data.liData === 'Life at Swiggy'}">
+                            {{data.liData}}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- <div class="bottomData">
+
+
+            </div> -->
+        </div>
+        <div class="bottomDown">
+            <div class="bottomDownInside">
+                <div class="bottomDownInsideOne">
+                    For better experience, download the Swiggy app now
+                </div>
+                <div class="bottomDownInsideTwo">
+                    <div class="InsideInsideBottom">
+                        <a class="InsideAnchor" href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage">
+                            <img style="height: 100%; width: 100%;" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv" alt="">
+                        </a>
+                        <a class="InsideAnchor" href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader">
+                            <img style="height: 100%; width: 100%;" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl" alt="">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+ 
+
+</div>
+<!-- <router-outlet></router-outlet> -->
+
+
+
+

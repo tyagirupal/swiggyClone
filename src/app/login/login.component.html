@@ -1,0 +1,83 @@
+<!-- 
+<div class="login" style="margin: 10%;">
+    <div class="loginUp" >
+        <span><mat-icon>clear</mat-icon></span>
+        <div class="" style="margin-top: 25px;font-size: 30px; font-weight: 400;">
+            Login
+        </div>
+        <div style="margin-top: 25px;">
+            or <span style="color: #ff5200; font-weight: 500;">create an account</span>
+        </div>
+        <img style=" position: absolute;top: 98px;right: 45%;z-index: -1;height: 15vh;" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="">
+    </div>
+    <form class="form-inline" [(ngModel)]="otp">
+        <div class="form-group mb-2">
+          <input placeholder="Phone Number" type="text"  class="form-control-plaintext" >
+        </div>
+        <button (click)="confirmIdentity()" type="submit" class=" btn-primary mb-2" style="background-color: #ff5200; color: white; font-size: 14px;
+    font-weight: 600;">Confirm identity</button>
+       <div class="form-group mb-2" *ngIf="OtpGenerator" >
+       <h2>Enter the OTP</h2>
+         <input type="text"  placeholder="Enter OTP">
+       </div>
+    <p style="font-weight: 500;">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+      </form>
+</div> -->
+
+<!-- <div class="container justify-content-center align-items-center vh-100"> -->
+  <div class="login" style="margin: 10%;">
+  <div class="loginUp" >
+    <span><mat-icon>clear</mat-icon></span>
+    <div class="" style="margin-top: 25px;font-size: 30px; font-weight: 400;">
+        Login
+    </div>
+    <div style="margin-top: 25px;">
+        or <span style="color: #ff5200; font-weight: 500;">create an account</span>
+    </div>
+    <img style=" position: absolute;top: 98px;right: 45%;z-index: -1;height: 15vh;" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="">
+  </div>
+  <div class="form-inline" >
+    <h3 >Login with OTP</h3>
+    <div class="form-group mb-2" *ngIf="!otpSent">
+      <input placeholder="Phone Number" type="text" [(ngModel)]="mobileNumber"  class="form-control-plaintext" >
+    </div>
+    <button (click)="sendOTP()" type="submit" class=" btn-primary mb-2" style="background-color: #ff5200; color: white; font-size: 14px;
+font-weight: 600;">Confirm identity</button>
+   <div   *ngIf="otpSent" >
+   <h2>Enter the OTP</h2>
+     <input type="text"  [(ngModel)]="otp" placeholder="Enter OTP" class="form-control-plaintext">
+     <button type="submit" class=" btn-primary mb-2" style="background-color: #ff5200; color: white; font-size: 14px; font-weight: 600;" (click)="verifyOTP()">Verify OTP</button>
+   </div>
+<p style="font-weight: 500;">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+  </div>
+</div>
+
+
+
+
+  <!-- <div class="card p-4 shadow-lg" style="width: 350px;">
+    <h3 class="text-center mb-3">Login with OTP</h3>
+
+  
+    <div *ngIf="!otpSent">
+      <div class="mb-3">
+        <label class="form-label">Mobile Number</label>
+        <input type="text" class="form-control" [(ngModel)]="mobileNumber" placeholder="Enter Mobile Number" maxlength="10" />
+      </div>
+      <button class="btn btn-primary w-100" (click)="sendOTP()">Send OTP</button>
+    </div>
+
+    <div *ngIf="otpSent">
+      <div class="mb-3">
+        <label class="form-label">Enter OTP</label>
+        <input type="text" class="form-control" [(ngModel)]="otp" placeholder="Enter OTP" maxlength="6" />
+      </div>
+      <button class="btn btn-success w-100" (click)="verifyOTP()">Verify OTP</button>
+    </div>
+
+    <p *ngIf="errorMessage" class="text-danger text-center mt-2">{{ errorMessage }}</p>
+    <p style="font-weight: 500;">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+
+  </div> -->
+
+

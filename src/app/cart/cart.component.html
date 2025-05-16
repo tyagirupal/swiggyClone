@@ -1,0 +1,27 @@
+<!-- <div *ngFor="let item of cartItems">
+    <img [src]="item.img" alt="{{ item.name }}" width="100">
+    <h3>{{ item.dataOne }}</h3>
+    <p> {{ item.dataTwo }}</p>
+    <p> {{ item.dataThree }}</p>
+</div> -->
+
+
+<h2>Shopping Cart</h2>
+<div style="display: flex; flex-wrap: wrap;">
+    <div class="thirdMainDiv " *ngFor="let data of cartItems">
+        <mat-card class="example-card" appearance="outlined" style="position: relative;">
+            <img mat-card-image [src]="data.img" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <div class="contThird">
+                    <div style=" font-family: Gilroy;font-size: 18px;font-weight: 600; display: flex; justify-content: space-between; align-items: center;">{{data.dataOne}}
+                        
+                    </div>
+                    <div style=" font-family: Gilroy;font-size: 18px; "><span>{{data.dataTwo}}</span></div>
+                    <div style=" font-family: Gilroy;font-size: 18px; ">{{data.dataThree}}</div>
+                </div>
+            </mat-card-content>
+          </mat-card>
+    </div>
+
+</div>
+
